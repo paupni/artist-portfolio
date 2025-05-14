@@ -19,12 +19,13 @@ export default function RootLayout({
           <header>
             <Navbar />
           </header>
-          <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+          <main className="flex">
             {children}
           </main>
-          <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-            footer
+          <footer className="m-5 items-center justify-center text-gray-700 md:flex md:items-center">
+            <span className="text-sm">© 2025 <a href="https://github.com/paupni" className="cursor-pointer hover:text-gray-400 transition-all duration-300">@paupni</a> | All Rights Reserved</span>
           </footer>
+          
       </body>
     </html>
   );
