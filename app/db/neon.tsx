@@ -19,3 +19,23 @@ export async function getArtworks() {
   }
 
 }
+
+export async function getArtwork(artworkId : string) {
+    try{
+        const artwork = await sql`
+            SELECT
+                artworks.id,
+                artworks.title,
+                artworks.image_url,
+                artworks.size
+            FROM artworks
+            WHERE artworks.id = ${artworkId}
+        `
+
+        return artwork[0];
+    }
+    catch (error) {
+        console.error('Database Error:', error);
+  }
+
+}
