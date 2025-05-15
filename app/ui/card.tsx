@@ -7,7 +7,7 @@ type CardProps = {
   title: string;
 };
 
-export default function Card({ artwork } : { artwork: CardProps }) {
+export default async function Card({ artwork } : { artwork: CardProps }) {
     return (
         <Link href={`/artworks/${artwork.id}`} className="block m-4 shadow-lg hover:opacity-50 transition">
             <div className="overflow-hidden">
