@@ -3,9 +3,7 @@ import { getArtwork } from "@/app/db/neon";
 export default async function ArtworkDetails({ params } : { params: Promise<{artworkId: string}> }) {
 
     const artworkId = (await params).artworkId;
-    const artwork = await getArtwork(artworkId);
-    console.log(artwork);
-    
+    const artwork = await getArtwork(artworkId);    
 
     return (
         <div>

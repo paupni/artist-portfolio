@@ -16,7 +16,7 @@ const links = [
 export default function Navbar() {
   const pathname = usePathname();
     return (
-      <div className="container flex justify-between items-baseline p-6 mx-auto text-gray-700">
+      <div className="container flex justify-between items-baseline my-6 mx-auto text-gray-700">
         <Logo />
         <div className="flex">
           {links.map((link) => {
@@ -31,7 +31,7 @@ export default function Navbar() {
             </Link>
             )}
           )}
-          <Link href="https://www.instagram.com/paula_pniewska/" className="[&>svg]:h-5 [&>svg]:w-5 pl-5 content-center cursor-pointer hover:text-gray-400 transition-all duration-300">
+          <Link href="https://www.instagram.com/paula_pniewska/" className="[&>svg]:h-5 [&>svg]:w-5 pl-5 content-center cursor-pointer hover:text-gray-400 transition-all duration-300 mx-1.5">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
