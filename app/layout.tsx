@@ -15,11 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.className} mx-6 flex-col min-h-screen`}>
+      <body className={`${openSans.className} mx-6 flex flex-col min-h-screen`}>
           <header>
             <Navbar />
           </header>
-          <main className='flex container mx-auto mt-10'>
+          <main className='flex flex-grow container mx-auto mt-10'>
             {children}
           </main>
           <footer className="m-5 items-center justify-center text-gray-700 md:flex md:items-center">
