@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.className} mx-6 flex flex-col min-h-screen`}>
+      <body className={`${openSans.className} mx-6 flex flex-col min-h-screen max-h-auto bg-white`}>
           <header>
             <Navbar />
           </header>
