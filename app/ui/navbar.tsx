@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Logo from "./logo";
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import { useState } from 'react';
 
 const links = [
   { name: 'Artworks', href: '/artworks' },
@@ -15,14 +16,29 @@ const links = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [navbar, setNavbar] = useState(false);
+
+  const handleClick = () => {
+      setNavbar(!navbar);
+      console.log("clicked");
+    };
+
     return (
       <div className="container flex justify-between items-baseline my-6 mx-auto text-gray-700">
         <Logo />
-        <div className="flex">
+        <button type="button" onClick={()=>handleClick()} 
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100">
+            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div className={`${
+            navbar ? '' : 'hidden'
+          } lg:flex`}>
           {links.map((link) => {
             return (
             <Link key={link.name} href={link.href} className={clsx(
-              'hover:text-gray-400 transition-all duration-300 mx-1.5 sm:mx-6', 
+              'hover:text-gray-400 transition-all duration-300 lg:mx-1.5 lg:mx-6 md:block sm:block', 
               {
                 'text-gray-400': pathname === link.href,
               },
@@ -31,7 +47,7 @@ export default function Navbar() {
             </Link>
             )}
           )}
-          <Link href="https://www.instagram.com/paula_pniewska/" className="[&>svg]:h-5 [&>svg]:w-5 pl-5 content-center cursor-pointer hover:text-gray-400 transition-all duration-300 mx-1.5">
+          <Link href="https://www.instagram.com/paula_pniewska/" className="[&>svg]:h-5 [&>svg]:w-5 pl-5 content-center cursor-pointer hover:text-gray-400 transition-all duration-300 lg:mx-1.5">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"

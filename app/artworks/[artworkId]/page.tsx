@@ -8,8 +8,8 @@ export default async function ArtworkDetails({ params } : { params: Promise<{art
 
 
     return (
-        <div className="flex gap-16 max-h-90">
-            <div>
+        <div className="md:flex gap-16 max-h-90">
+            <div className="mb-6">
                 <img className="max-h-screen" src={artwork?.image_url}></img>
             </div>
             <div className="">
