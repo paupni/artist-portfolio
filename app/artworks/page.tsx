@@ -19,7 +19,7 @@ export default async function Artworks() {
     images.blobs.shift();
 
     return (
-        <main className="md:flex md:gap-4 md:flex-wrap">
+        <main className="md:flex md:gap-4 md:flex-wrap justify-between">
             {images.blobs.map((image, index) => {
                 let artworkInfo = artworks[index];
                 return(    
