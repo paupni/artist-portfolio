@@ -8,7 +8,7 @@ export default async function ArtworkDetails({ params } : { params: Promise<{art
 
 
     return (
-        <div className="md:flex gap-16 max-h-90">
+        <div className="lg:flex flex-grow md:container md:mx-auto justify-center gap-16">
             <div className="mb-6">
                 <img className="max-h-screen" src={artwork?.image_url}></img>
             </div>
