@@ -21,7 +21,7 @@ export default function Navbar() {
   const handleClick = () => {
     setNavbar(!navbar);
   };
-  
+
   useEffect(() => {
     setNavbar(false);
   }, [ pathname ]);
@@ -53,7 +53,7 @@ export default function Navbar() {
                 </Link>
               )}
             )}
-            <Link href="https://www.instagram.com/paula_pniewska/" className="[&>svg]:h-5 [&>svg]:w-5 px-3 py-2 content-center cursor-pointer hover:text-gray-400 transition-all duration-300 lg:mx-1.5">
+            <Link href="https://www.instagram.com/paula_pniewska/" className="[&>svg]:h-5 [&>svg]:w-5 px-3 py-2 pb-2.5 content-center cursor-pointer hover:text-gray-400 transition-all duration-300 lg:mx-1.5">
               <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
