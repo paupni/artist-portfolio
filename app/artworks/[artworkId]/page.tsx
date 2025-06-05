@@ -6,7 +6,7 @@ export default async function ArtworkDetails({ params } : { params: Promise<{art
     const artworkId = (await params).artworkId;
     const artwork = await getArtwork(artworkId);
 
-
+    console.log(artworkId);
     return (
         <div className="lg:flex flex-grow md:container md:mx-auto justify-center gap-16">
             <div className="mb-6">

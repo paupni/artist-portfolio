@@ -9,7 +9,8 @@ export async function getArtworks() {
                 artworks.id,
                 artworks.title,
                 artworks.image_url,
-                artworks.size
+                artworks.size,
+                artworks.name
             FROM artworks
         `
         return artworks;
@@ -20,16 +21,17 @@ export async function getArtworks() {
 
 }
 
-export async function getArtwork(artworkId : string) {
+export async function getArtwork(artworkName : string) {
     try{
         const artwork = await sql`
             SELECT
                 artworks.id,
                 artworks.title,
                 artworks.image_url,
-                artworks.size
+                artworks.size,
+                artworks.name
             FROM artworks
-            WHERE artworks.id = ${artworkId}
+            WHERE artworks.name = ${artworkName}
         `
 
         return artwork[0];
