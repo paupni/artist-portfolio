@@ -19,7 +19,7 @@ export default async function Artworks() {
     // images.blobs.shift();
 
     return (
-        <main className="container columns-1 sm:columns-1 md:columns-3 lg:columns-5 [&>img:not(:first-child)]">
+        <main className="container columns-1 sm:columns-1 md:columns-3 lg:columns-6 [&>img:not(:first-child)]">
                 {/* {images.blobs.map((image, index) => { */}
                 {artworks.map((image, index) => {
                     let artworkInfo = artworks[index];
