@@ -19,7 +19,7 @@ export default function RootLayout({
           <header>
             <Navbar />
           </header>
-          <main className='md:flex flex-grow md:container md:mx-auto mt-10'>
+          <main className='md:flex flex-grow md:container md:mx-auto mt-6'>
             {children}
           </main>
           <footer className="m-5 items-center justify-center text-gray-700 md:flex md:items-center">

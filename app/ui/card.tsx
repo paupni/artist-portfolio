@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from 'next/image';
 
 type CardProps = {
   id: string;
@@ -10,9 +11,15 @@ type CardProps = {
 
 export default async function Card({ artwork } : { artwork: CardProps }) {
     return (
-        <Link href={`/artworks/${artwork.name}`} className="block shadow-lg hover:opacity-50 transition mb-6">
+        <Link href={`/artworks/${artwork.name}`} className="shadow-[#106ae0] shadow-lg hover:opacity-50 transition">
             <div className="overflow-hidden">
-                <img src={artwork.imageUrl} alt={artwork.name} className="h-auto max-w-full object-cover" />
+                <Image 
+                    src={artwork.imageUrl} 
+                    alt={artwork.name}
+                    width={400}
+                    height={300}
+                    className="h-auto max-w-full object-cover my-2" 
+                />
             </div>
         </Link>
     )
